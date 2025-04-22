@@ -1,0 +1,109 @@
+{
+	"info": {
+		"_postman_id": "332d35b7-0c9c-4931-b4c7-10aefeefd699",
+		"name": "filtracao_paulistao_backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43539746"
+	},
+	"item": [
+		{
+			"name": "todos_times",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/dados_time",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"dados_time"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "grupos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/grupos/a",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"grupos",
+						"a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "gols_vazados",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/golsofridos",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"golsofridos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saldo_gols",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/melhores_SG",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"melhores_SG"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rendimentos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/rendimento",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rendimento"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "proxima_fase",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
