@@ -1,25 +1,26 @@
-const {bd_jogos_paulistao} = require('./bd_times.js')
+const {bd_jogos_paulistao} = require('./database/bd_times.js')
+const database = bd_jogos_paulistao
 
-function Calculos(){
-    bd_jogos_paulistao.forEach(time => {
-        // Calculo da pontuação
-        time.pontos = time.vitorias * 3 + time.empates;      
-        // Calculo do Saldos de gols
-        time.SG = time.GP - time.GC;
-        // Total de jogos
-        const totalJogos = time.vitorias + time.empates + time.derrotas;
-        // Calculo do rendimento (em %)
-        time.rendimento = ((time.pontos / (totalJogos * 3)) * 100).toFixed(0) + "%";
-    });
-};
-// Executa a função que calcula os dados do json antes de exportar o json, fazendo com que o json seja exportado com os dados editados
-Calculos();
+function adicoes() {
+    database.forEach(time => {
 
-function apresentar(){
-    return bd_jogos_paulistao;
-};
+        time.jogos = time.vitorias + time.empates + time.derrotas
+        time.pontos = time.vitorias * 3 + time.empates * 1 + time.derrotas * 0 // Calcular os pontos
+        time.SG = time.GP - time.GC
+        time.rendimentos = (time.pontos / (time.jogos * 3) * 100).toFixed(0) + "%"
+        
 
-// Grupos A,B,C e D
+    })
+    return database;
+
+}
+adicoes()
+
+
+function apresentar() {
+    return adicoes()
+}
+
 function grupos (ChosenGroup){
     // olha cada time e analisa se o grupo pedido e o do time é identico
     return bd_jogos_paulistao.filter(time => time.grupo === ChosenGroup);
@@ -45,26 +46,18 @@ function grupos (ChosenGroup){
     */
 }
 
-// Cinco SG
-function maisgols(){
-
+function saldo_gols() {
     // '.sort' = ordena vetor, existe diversas maneiras de utiliza=lo
-    // para *textos* só colocar .sort(), que vai em ordem alfabetica;
-    // para *números* defina parametros, e defina uma lógica ex: a-b;
-    // para *atributos* defina parametros, e uma lógica ex b.SG - a.SG
-    // essa situação coloquei b.SG - a.SG para gerar uma lista em ordem decrescente (do maior para menor)
-    bd_jogos_paulistao.sort((a,b) => b.SG - a.SG ); // 'a,b' são parametros da função .sort, que referem se ao primeiro e segundo valor do vetor, e depois segundo e terceiro e assim por diante
+    database.sort((a,b)=> b.SG - a.SG );
     // '.slice' = pega uma parte do vetor, nesse caso pega do indice 0-4 [o último indice especificado não é incluido]
-    return bd_jogos_paulistao.slice(0,5);
-};
+    return database.slice(0,5)
+}
 
-// Cinco rendimento
-function maisdesempenho(){
-    bd_jogos_paulistao.sort((a,b) => parseInt(b.rendimento) - parseInt(a.rendimento));
-    return bd_jogos_paulistao.slice(0,5);
-};
+function desempenho() {
+    database.sort((a,b) => parseInt(b.rendimentos) - parseInt(a.rendimentos))
+    return database.slice(0,4)
+}
 
-// Cinco GC
 function golsofridos(){
 
     bd_jogos_paulistao.sort((a,b) => b.GC - a.GC );
@@ -84,13 +77,11 @@ function next(){
     return classificados;
 }
 
-
-module.exports = 
-{
+module.exports = {
     apresentar,
-    maisgols,
     grupos,
-    maisdesempenho,
+    saldo_gols,
+    desempenho,
     golsofridos,
     next
-};
+}

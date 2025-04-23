@@ -12,13 +12,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:3000/dados_time",
+					"raw": "localhost:3000/dados_times",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
-						"dados_time"
+						"dados_times"
 					]
 				}
 			},
@@ -30,13 +30,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:3000/grupos/a",
+					"raw": "localhost:3000/grupo/a",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
-						"grupos",
+						"grupo",
 						"a"
 					]
 				}
@@ -67,13 +67,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:3000/melhores_SG",
+					"raw": "localhost:3000/saldo_gols",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
-						"melhores_SG"
+						"saldo_gols"
 					]
 				}
 			},
@@ -85,13 +85,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:3000/rendimento",
+					"raw": "localhost:3000/desempenho",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
-						"rendimento"
+						"desempenho"
 					]
 				}
 			},
@@ -101,7 +101,17 @@
 			"name": "proxima_fase",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/proximafase",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"proximafase"
+					]
+				}
 			},
 			"response": []
 		}

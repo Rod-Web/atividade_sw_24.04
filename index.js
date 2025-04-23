@@ -1,27 +1,28 @@
 const express = require('express')
-const app = express();
+const app = express()
 
-const { router_times } = require('./routes/times.js');
-const { router_SG } = require('./routes/saldo_gols.js');
-const { router_grupos } = require('./routes/grupos.js');
-const { router_rendimento } = require('./routes/rendimento.js');
-const { router_GC } = require('./routes/gols_sofridos.js');
-const { router_next } = require('./routes/proximafase.js');
+const {router_apresentar} = require('./router/apresentar.js')
+const {router_grupos} = require('./router/grupos.js')
+const { router_saldo_gols } = require('./router/saldo_gols.js')
+const { router_desempenho } = require('./router/desempenho.js')
+const { router_GC } = require('./router/gol_vazado.js')
+const { router_next } = require('./router/proximafase.js')
 
-app.use('/', 
-    router_times, // Apresenta tudo
-    router_SG,  // Apresenta os 5 com mais saldo de Gols
-    router_grupos, // Apresenta os grupos dos times
-    router_rendimento, // apresemta os 5 maiores rendimentos
-    router_GC, // apresenta os 5 times com mais gols vazados
-    router_next // apresenta os times da próxima fase
-);
+app.use('/',
+    router_apresentar,
+    router_grupos,
+    router_saldo_gols,
+    router_desempenho,
+    router_GC,
+    router_next
+)
 
-app.get('/', (req, res)=>{
-    res.send("Hello Word!");
-});
+app.get('/', (req, res) => {
+    res.send("Hello Word!")
+})
 
-const porta = 3000;
-app.listen(porta, ()=>{
-    console.log("Operando na porta " + 3000);
+
+const porta = 3000
+app.listen( porta, ()=> {
+    console.log("Rodando na porta " + porta)
 });

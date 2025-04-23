@@ -2,7 +2,6 @@ const bd_jogos_paulistao = [
     {
         "sigla": "COR",
         "nome": "Corinthians",
-        "jogos": 12,
         "vitorias": 8,
         "empates": 3,
         "derrotas": 1,
@@ -14,7 +13,6 @@ const bd_jogos_paulistao = [
     {
         "sigla": "MIR",
         "nome": "Mirassol",
-        "jogos": 12,
         "vitorias": 5,
         "empates": 1,
         "derrotas": 6,
@@ -26,7 +24,6 @@ const bd_jogos_paulistao = [
     {
         "sigla": "BSP",
         "nome": "Botafogo-SP",
-        "jogos": 12,
         "vitorias": 2,
         "empates": 5,
         "derrotas": 5,
@@ -38,7 +35,6 @@ const bd_jogos_paulistao = [
     {
         "sigla": "INL",
         "nome": "Inter de Limeira",
-        "jogos": 12,
         "vitorias": 0,
         "empates": 7,
         "derrotas": 5,
@@ -50,7 +46,6 @@ const bd_jogos_paulistao = [
     {
         "sigla": "SAN",
         "nome": "Santos",
-        "jogos": 12,
         "vitorias": 5,
         "empates": 3,
         "derrotas": 4,
@@ -62,7 +57,6 @@ const bd_jogos_paulistao = [
     {
         "sigla": "RBB",
         "nome": "Bragantino",
-        "jogos": 12,
         "vitorias": 5,
         "empates": 2,
         "derrotas": 5,
@@ -74,7 +68,6 @@ const bd_jogos_paulistao = [
     {
         "sigla": "GUA",
         "nome": "Guarani",
-        "jogos": 12,
         "vitorias": 3,
         "empates": 4,
         "derrotas": 5,
@@ -86,7 +79,6 @@ const bd_jogos_paulistao = [
     {
         "sigla": "POR",
         "nome": "Portuguesa",
-        "jogos": 12,
         "vitorias": 2,
         "empates": 7,
         "derrotas": 3,
@@ -98,7 +90,6 @@ const bd_jogos_paulistao = [
     {
         "sigla": "SAO",
         "nome": "São Paulo",
-        "jogos": 12,
         "vitorias": 5,
         "empates": 4,
         "derrotas": 3,///
@@ -110,7 +101,6 @@ const bd_jogos_paulistao = [
     {
         "sigla": "NOV",
         "nome": "Novorizontino",
-        "jogos": 12,
         "vitorias": 4,
         "empates": 6,
         "derrotas": 2,
@@ -122,7 +112,6 @@ const bd_jogos_paulistao = [
     {
         "sigla": "NOR",
         "nome": "Noroeste",
-        "jogos": 12,
         "vitorias": 1,
         "empates": 5,
         "derrotas": 6,
@@ -134,7 +123,6 @@ const bd_jogos_paulistao = [
     {
         "sigla": "AGS",
         "nome": "Água Santa",
-        "jogos": 12,
         "vitorias": 1,
         "empates": 4,
         "derrotas": 7,
@@ -146,7 +134,6 @@ const bd_jogos_paulistao = [
     {
         "sigla": "SBD",
         "nome": "São Bernardo",
-        "jogos": 12,
         "vitorias": 7,
         "empates": 2,
         "derrotas": 3,
@@ -158,7 +145,6 @@ const bd_jogos_paulistao = [
     {
         "sigla": "PAL",
         "nome": "Palmeiras",
-        "jogos": 12,
         "vitorias": 6,
         "empates": 5,
         "derrotas": 1,
@@ -170,7 +156,6 @@ const bd_jogos_paulistao = [
     {
         "sigla": "PON",
         "nome": "Ponte Preta",
-        "jogos": 12,
         "vitorias": 6,
         "empates": 4,
         "derrotas": 2,
@@ -182,7 +167,6 @@ const bd_jogos_paulistao = [
     {
         "sigla": "VEL",
         "nome": "Velo Clube",
-        "jogos": 12,
         "vitorias": 3,
         "empates": 4,
         "derrotas": 5,
